@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bookstore?useSSL=false</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		
+		<mapping class="com.BookStoreApplication.Author"/>
+		<mapping class="com.BookStoreApplication.Book"/>
+		<mapping class="com.BookStoreApplication.Customer"/>
+		<mapping class="com.BookStoreApplication.GoldCustomer"/>
+		<mapping class="com.BookStoreApplication.SilverCustomer"/>
+		<mapping class="com.BookStoreApplication.Order"/>
+		<mapping class="com.BookStoreApplication.OrderItem"/>
+		<mapping class="com.BookStoreApplication.ShippingAddress"/>
+		<mapping class="com.BookStoreApplication.CreditCard"/>
+
+	</session-factory>
+
+</hibernate-configuration>

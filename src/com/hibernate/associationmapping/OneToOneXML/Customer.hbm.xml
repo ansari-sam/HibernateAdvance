@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="com.hibernate.associationmapping.OneToOneXML">
+    <class name="Customer" table="MyCustomers">
+    <id name="Cid" type="int" column="Cid">
+    <generator class="increment"/>
+    </id>
+    <property name="FirstName" column="FirstName"/>
+    <property name="LastName" column="LastName"/>
+    <property name="Phone" column="Phone"/>
+    <property name="Email" column="Email"/>
+    
+    <many-to-one name="address" class="Address" column="Aid"></many-to-one>
+    
+    </class>
+    
+    
+    </hibernate-mapping>
